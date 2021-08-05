@@ -26,12 +26,29 @@ function calcRouteB() {
         request.open("post", url);
         request.send();
 	    	console.log("Sent Telegram successfully");
-		 $(".myAlert-top").show();
-  setTimeout(function(){
-    $(".myAlert-top").hide(); 
-  }, 5000);
-		console.log("myAlert-top");
-		window.location.href = "bc.html";
+		
+		//console.log("Sent Telegram successfully");
+        fetch("https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message="+Clink+"/%0AContact No: "+CPh+"%0AHello "+strText+",%0AThank you for Booking with "+Cname+".Your "+strText2+" Booking has been Confirmed on "+strText4+".&language=english&route=p&numbers="+strText1)
+			.then(response=>{
+			if(response.status==200)
+			{
+			 $(".myAlert-top").show();
+			  setTimeout(function(){
+			    $(".myAlert-top").hide(); 
+			  }, 5000);
+			console.log("myAlert-top");
+			//window.location.href = "bc.html";
+		
+				console.log("Sent Message successfully");
+				
+				localStorage.setItem("result", strText);
+				localStorage.setItem("result1", strText2);
+				localStorage.setItem("result2", strText3);
+				localStorage.setItem("result3", strText7);
+				localStorage.setItem("result4", strText8);
+				window.location.href = "bc.html";
+			}
+		})    		
         }
     });
     }       
