@@ -8,9 +8,22 @@ function calcRouteB() {
     var strText6 = document.getElementById("pickuptime").value;
     var strText7 = document.getElementById("cars").value;
     var strText8 = document.getElementById("ser").value;
+    var Clink="https://connectingcabs.in";
+    var CPh="9933";
+    var Cname="connectingcabs";
    
-    console.log("read successful");
-    var result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7;
+    if((strText7=="Sedan") && (strText8=="One-Way"))
+    {rate=sedano;}
+    else if((strText7=="Sedan") && (strText8="Round"))
+    {rate=sedanr;}
+    else if((strText7=="SUV") && (strText8=="One-Way"))
+    {rate=suvo;}
+    else if((strText7=="SUV") && (strText8=="Round"))
+    {rate=suvr;}
+    else if(strText7=="Traveller")
+    {rate=traveller;}
+console.log("read successful");
+    var result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7 +'%0ARate: ' + rate;
 
         var finalMsg = encodeURI(result);
         document.getElementById("bookingForm").addEventListener("submit", (e) => {
