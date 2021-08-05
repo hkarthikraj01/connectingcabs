@@ -19,12 +19,20 @@
 		<link href="css/animate.css" rel="stylesheet">
 		<link href="css/responsive.css" rel="stylesheet">
 		<!-- Css Files End -->
-		
+                <style>
+		    .container-map{
+			width: 126%;
+			height: 33rem;
+			margin: -13%;
+		    }
+		</style>
+    
 		<!--[if lt IE 9]>
 	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	    <![endif]-->
-
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrVud8x3PFL-jig7HpNaw7hXZbo0rl1jo&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
 	<style>
 		html
@@ -261,6 +269,49 @@
 												<input type="text" name="trip_pick_loc" placeholder="Drop Locations" id="location-2">
 											</div>
 										</div>
+										<div class="col-md-12 col-sm-12">
+											
+											<div class="field-box">
+												<button class="btn btn-success" type="button" onclick="calcRoute();">Check Price</button>
+											</div>
+										</div>
+										
+										
+										
+										
+										
+										<div id="ma" style="display: none;">  
+                <br><br>                              
+                                 
+                <b> <div id="output" class="result-table"></div></b>
+                <div class="container-map" id="google-map"></div> 
+<br><br>
+               <div class="col-md-6" required>
+                <div class="service-thumbnail d-flex flex-fill">
+                <img src="https://a1droptaxi.com/img/etios.png" alt="#" style="height: 130px; width: 130px; ">
+                <div id="output1" class="meta-item">
+            </div>
+        </div>
+    </div>
+                
+                 <div class="col-md-6">
+                <div class="service-thumbnail d-flex flex-fill">
+                <img src="https://a1droptaxi.com/img/crysta.png" alt="#" style="height: 130px; width: 130px; ">
+                <div id="output2" class="meta-item">
+            </div>
+        </div>
+    </div>
+
+                
+
+                <div class="col-md-6">
+                <div class="service-thumbnail d-flex flex-fill">
+                <img src="https://a1droptaxi.com/img/traveller.png" alt="#" style="height: 130px; width: 130px; ">
+                <div id="output3" class="meta-item">
+            </div>
+        </div>
+    </div>
+        </div> 
 										<div class="col-md-6 col-sm-6">
 											<div class="field-box">
 												<span class="fas fa-male"></span>
@@ -329,7 +380,7 @@
 										
 										
 										<div class="col-md-3 col-sm-3">
-											<button type="submit" class="search-btn" onclick="calcRoute()">Book Cab <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>	
+											<button type="submit" id="ma1" class="search-btn" onclick="calcRouteB()">Book Cab <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>	
 										</div>
 																			<div class="myAlert-top alert alert-success">
 									  <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
@@ -833,8 +884,12 @@
 		<script src="js/jquery.validate.min.js"></script> 
 		<script src="js/custom.js"></script>
 		<script src="js/map.js"></script>
+		<script src="js/gmap.js"></script>
 		<script src="js/book.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6jA7zgSOl8PDIEhtHL4nmOvGCLezPYn4"></script>
+	        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNKpr4auBLgBgiOXJ41UUWTB58MZa6p3E&libraries=places"></script>
+	        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrVud8x3PFL-jig7HpNaw7hXZbo0rl1jo"></script>
+
 		<!-- Js Files End --> 
 	</body>
 </html>
