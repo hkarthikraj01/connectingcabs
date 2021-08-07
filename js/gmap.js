@@ -23,7 +23,7 @@ var sedano;
 var sedanr;
 var suvo; 
 var suvr;
-
+var n;
 // Define calcRoute function
 function calcRoute() {
      var y = document.getElementById("ma");
