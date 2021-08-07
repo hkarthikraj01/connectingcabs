@@ -44,7 +44,7 @@ function calcRoute() {
 
             //Get distance and time            
             var d=result.routes[0].legs[0].distance.value/1000;
-            var n = d.toFixed(0);
+            n = d.toFixed(0);
             sedano=((n*12)+350)+" - "+((n*12)+500);
             sedanr=2*((n*12)+350)+" - "+2*((n*12)+500);
             suvo=((n*16)+350)+" - "+((n*16)+500);
